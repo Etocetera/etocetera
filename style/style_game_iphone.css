@@ -1,0 +1,39 @@
+span {
+	position:absolute;
+	left:-700px;
+	top: 0px;
+	transition: 1s;
+    /* メニューの背景色 */
+	background-color: #FA5858;
+    z-index: 2;
+}
+
+.option{
+	position: absolute;
+	left:0px;
+}
+
+span img{
+	width:70px;
+}
+
+#canvas_animation{
+	display:block;
+	background-color: #fff;
+	z-index: 1;
+	position: absolute;
+	top: 0px;
+}
+
+.none{
+	display: none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.ui-overlay-a{
+	background-color: rgba(0,0,0,0);
+}

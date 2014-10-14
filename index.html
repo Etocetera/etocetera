@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <title>干支•セトラ</title>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="干支•セトラ">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="iPhoneとPCを使ったパズルゲーム">
+    <meta property="og:url" content="http://etocetera.herokuapp.com/">
+    <meta property="og:image" content="http://etocetera.herokuapp.com/materials/images/characters/mouse/og_icon.png">
+    <meta name="twitter:site" content="@ikenvovres">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="materials/images/characters/mouse/mouse_icon.png">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="javascript/index.js"></script>
+    <style>#dialog{display:none;}</style>
+</head>
+<body>
+    <div id="index"></div>
+    
+    <div id="dialog">
+        <div id="error_no">
+            そのルームは作成されていません
+        </div>
+        <div id="error_max">
+            そのルームは使われています            
+        </div>
+        <div id="error_read">
+            読み込めませんでした
+        </div>
+        <div id="error_num">
+            iphoneのsafariとPCで接続してください
+        </div>
+        <div id="error_connecting">
+            接続が切れました
+        </div>
+    </div>
+</body>
+</html>

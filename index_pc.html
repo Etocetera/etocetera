@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+	<title>Document</title>
+  	
+    <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/cupertino/jquery-ui.min.css">
+    <link rel="stylesheet" href="style/style_index_pc.css">
+    <script src="javascript/index_pc.js"></script>
+</head>
+<body>
+	<div id="content">
+		<img src="materials/images/system/game_frame.png" alt="フレーム画像" id="game_frame_img"/>
+		<div id="main">	
+		    <img src="materials/images/system/title.png" alt="タイトル画像" id="title_img" />
+	    	
+			<div id="wait">
+				<nobr id="connection">接続待ち</nobr>
+		        <div id="room"></div>
+		        <img src="materials/images/system/back.png" alt="もどる" id="del" onclick="roomDel()">
+		    </div>
+	 
+		 	<div id="wait_put">
+				<form action="" method="get" onsubmit="return false;" id="form_enter">
+			        <input id="enter" type="text" name="enter" value="番号入力" onFocus="cText(this)" onBlur="sText(this)" style="color:#999;"/> 
+			    	<img src="materials/images/system/decide.png" alt="決定" onclick="roomPut_confirm()" id="enter_button">
+			   
+			    	<img src="materials/images/system/back.png" alt="もどる" id="cancel_button" onclick="cancel_put()">
+		    	</form>
+		 	</div>
+		 	<img src="materials/images/system/button_game_start.png" alt="ゲームスタート" id="game_start" onclick="game_put()">
+
+			<div id="room_button_img">
+			 	<img src="materials/images/system/room_creation.png" alt="つくる" onclick="roomMake()" id="make">
+			    <img src="materials/images/system/room_entrance.png" alt="はいる" id="enter_img" onclick="room_put_click()">
+			</div>
+	    </div>
+	</div>	
+	<div id="sub">
+	    <ul>
+	    <li><a href="#menu1">ゲームの始め方</a></li>
+	    <li><a href="#menu2">ゲーム詳細</a></li>
+	    <li><a href="#menu3">注意</a></li>
+	    <li><a href="#menu4">このサイトへのQRコード</a>
+	    </ul>
+	    <div id="menu1">iPhoneのSafariとPCでこのサイトに接続します。
+	    <br>
+	    一方でルーム作成を選択し、もう一方で作成されたルーム番号を入力し、ルームへを選択します。そうするとゲームが始まります。</div>
+	    <div id="menu2">iPhoneをコントローラーとして使用するゲームです。<br>
+	    画面タッチでストップ•スタート、iPhoneを回転させることでステージが回転します。</div>
+	    <div id="menu3">
+	    通信が不安定な場所で行うと通信が切れ、ゲームが終了する可能性があります。また、iPhoneのスリープによっても、通信が切れ、ゲームが終了する可能性がありますので自動ロックまでの時間は長めに設定しておいて下さい。</div>
+	    <div id="menu4"><img src="http://chart.apis.google.com/chart?cht=qr&chs=150x150&chl=%http://etocetera.herokuapp.com/&choe=Shift_JIS" width="150" height="150" alt="QRコード"></div>
+	</div>
+	<div id="game"></div>
+	
+    <img src="materials/images/system/volume_up.png" alt="音量をあげる" onclick="up_volume()" id="volume_up">
+	<img src="materials/images/system/volume_down.png" alt="音量をさげる" onclick="down_volume()" id="volume_down">
+
+	<audio id="bgm" preload="auto" autoplay loop>
+   	    <source src="materials/musics/bgm.mp3" type="audio/mp3">
+	</audio>
+
+	<audio id="bgm_game" preload="auto" loop>
+   	    <source src="materials/musics/bgm_game.mp3" type="audio/mp3">
+	</audio>
+
+	<audio id="make_sound" preload="auto">
+   	    <source src="materials/musics/make.mp3" type="audio/mp3">
+	</audio>
+
+	<audio id="put_sound" preload="auto">
+   	    <source src="materials/musics/make.mp3" type="audio/mp3">
+	</audio>
+
+	<audio id="roomDel_sound" preload="auto">
+   	    <source src="materials/musics/roomDel.mp3" type="audio/mp3">
+	</audio>
+
+	<audio id="dialog_sound" preload="auto">
+   	    <source src="materials/musics/dialog.mp3" type="audio/mp3">
+	</audio>
+    
+    <audio id="item_sound" preload="auto">
+        <source src="materials/musics/item.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="chara_change_sound" preload="auto">
+        <source src="materials/musics/chara_change.mp3" type="audio/mp3">
+    </audio>
+</html>

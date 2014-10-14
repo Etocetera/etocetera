@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+    <link rel="stylesheet" href="style/style_index_iphone.css" />
+    
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<script src="javascript/index_iphone.js"></script>
+</head>
+<body>
+	<!--ページ領域-->
+    <div data-role="page" data-title="干支•セトラ" id="content">
+
+    <!--ヘッダー領域-->
+    <div data-role="header">
+        <img src="images/system/title.png" alt="タイトル画像" id="title_img" />	
+    </div>
+
+    <div role="main" class="ui-content">
+  	    <img src="images/system/button_game_start.png" alt="ゲームスタート" id="game_start" onclick="game_put()">
+		    	
+		    <div id="wait">
+				<p id="room_display">部屋番号</p>
+			    <div id="room"></div>
+				    
+				<img src="images/system/back.png" alt="もどる" id="del" onclick="roomDel()">
+			</div>
+					
+			<div id="wait_put">
+				<form action="" method="get" onsubmit="return false;" id="form_enter">
+				    <input id="enter" style="width: 200px;" type="text" name="enter" value="番号を入力して下さい" onFocus="cText(this)" onBlur="sText(this)" style="color:#999;"/> 
+					<img src="images/system/decide.png" alt="決定" onclick="roomPut_confirm()" id="enter_button">
+			    	<img src="images/system/back.png" alt="もどる" id="cancel_button" onclick="cancel_put()">
+				</form>
+			</div>
+
+		 	<div id="room_button_img">
+				<img src="images/system/room_creation.png" alt="つくる" onclick="roomMake()" id="make">
+				<br>
+				<img src="images/system/room_entrance.png" alt="はいる" id="enter_img" onclick="room_put_click()">
+			</div>
+    </div>
+
+    <div data-role="footer">
+        <p id="footer_text">ゲームの始め方</p>
+    </div>
+	    <p>
+			一方でルーム作成を選択し、もう一方で作成されたルーム番号を入力し、ルームへを選択します。そうするとゲームが始まります。
+		</p>
+    </div>
+
+<div id="game"></div>
+</body>
+</html>

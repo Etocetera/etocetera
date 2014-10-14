@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>ゲームデモ</title>
+    <link rel="stylesheet" href="style/style_game_pc.css">
+    <link rel="icon" type="image/png" href="materials/images/characters/mouse/mouse_icon.png">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <script src="javascript/game_pc.js"></script>
+</head>
+<body>
+    <header></header>
+    <div id="gameScreen">
+        <img id="gameFrame" src="materials/images/system/game_frame.png">
+        <!-- 背景用のcanvas -->
+        <canvas id="canvas0" width="1024" height="512"></canvas>
+        <!-- キャラ描画用のcanvas -->
+        <canvas id="canvas1" width="1024" height="512"></canvas>
+        <!-- ステージ描画用のcanvas -->
+        <canvas id="canvas2" width="1024" height="512"></canvas>
+        <!-- エフェクト描画用のcanvas -->
+        <canvas id="canvas3" width="1024" height="512"></canvas>
+        <!-- 文字描画用のcanvas -->
+        <canvas id="topCanvas" width="1024" height="512"></canvas>
+        <!-- デバッグ、クリックイベント用のcanvas -->
+        <canvas id="debugCanvas" width="1024" height="512"></canvas>
+    </div>
+    <!-- ゲームで使う画像の読み込み -->
+    <!-- 背景 -->
+    <img id="backImg1" src="materials/images/background/back1.png" class="none">
+    <!-- ステージプリミティブ -->
+    <img id="doorImg" src="materials/images/objects/door.png" class="none">
+    <img id="blocksImg" src="materials/images/objects/blocks.png" class="none">
+    <img id="grassFloorImg" src="materials/images/objects/grass_floor.png" class="none">
+    <img id="cheeseImg" src="materials/images/objects/cheese.png" class="none">
+    <img id="cheesePoisonImg" src="materials/images/objects/cheese_poison.png" class="none">
+    <img id="carrotImg" src="materials/images/objects/carrot.png" class="none">
+    <!-- キャラクター -->
+    <img id="birdImg" src="materials/images/characters/bird/bird.png" class="none">
+    <img id="cowImg" src="materials/images/characters/cow/cow.png" class="none">
+    <img id="dogImg" src="materials/images/characters/dog/dog.png" class="none">
+    <img id="dragonImg" src="materials/images/characters/dragon/dragon.png" class="none">
+    <img id="horseImg" src="materials/images/characters/horse/horse.png" class="none">
+    <img id="monkeyImg" src="materials/images/characters/monkey/monkey.png" class="none">
+    <img id="mouseImg" src="materials/images/characters/mouse/mouse.png" class="none">
+    <img id="rabbitImg" src="materials/images/characters/rabbit/rabbit.png" class="none">
+    <img id="sheepImg" src="materials/images/characters/sheep/sheep.png" class="none">
+    <img id="snakeImg" src="materials/images/characters/snake/snake.png" class="none">
+    <img id="tigerImg" src="materials/images/characters/tiger/tiger.png" class="none">
+    <img id="wildBoarImg" src="materials/images/characters/wild_boar/wild_boar.png" class="none">
+    <!-- エフェクト -->
+    <img id="goalImg" src="materials/images/effects/goal.png" class="none">
+    <!-- システム -->
+    <img id="titleImg" src="materials/images/system/title.png" class="none">
+    <img id="hiraganaImg" src="materials/images/system/hiragana.png" class="none">
+    <img id="katakanaImg" src="materials/images/system/katakana.png" class="none">
+    <img id="textWindowImg" src="materials/images/system/textWindow.png" class="none">
+    <img id="timeWindowImg" src="materials/images/system/timeWindow.png" class="none">
+    <img id="gameoverImg" src="materials/images/system/game_over.png" class="none">
+    <img id="gameclearImg" src="materials/images/system/game_clear.png" class="none">
+    <!-- ここまで -->
+    <!-- ここまで -->
+    <footer></footer>
+    <!-- end of page -->
+</body>
+</html>

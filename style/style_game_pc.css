@@ -1,0 +1,53 @@
+#gameScreen {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+}
+
+#gameFrame {
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+}
+
+#canvas0 {
+    position: absolute;
+    z-index: 1;
+    left: 88px;
+    top: 44px;
+}
+
+#canvas1 {
+    position: absolute;
+    z-index: 2;
+    left: 88px;
+    top: 44px;
+}
+
+#canvas2 {
+    position: absolute;
+    z-index: 3;
+    left: 88px;
+    top: 44px;
+}
+
+#canvas3 {
+    position: absolute;
+    z-index: 4;
+    left: 88px;
+    top: 44px;
+}
+
+#topCanvas {
+    position: absolute;
+    z-index: 100;
+    left: 88px;
+    top: 44px;
+}
+
+
+.none {
+    display: none;    
+}
