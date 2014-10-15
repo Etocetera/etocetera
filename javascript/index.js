@@ -21,7 +21,7 @@ if (userAgent.indexOf('safari') != -1&&ua.indexOf('IPHONE') != -1) {
     load_File("#index", "index_pc.html");
 }
 
-var socket = io.connect('http://etocetera.herokuapp.com/')
+var socket = io.connect('http://localhost:5000')
 var iphone_count = 0;
 var client_count = 0; 
 var room_name;

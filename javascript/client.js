@@ -1,4 +1,4 @@
-var socket = io.connect('http://etocetera.herokuapp.com/');
+var socket = io.connect('http://localhost:5000');
 
 function send() {
 	var ctx = document.getElementById('context').value;
